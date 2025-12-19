@@ -1,0 +1,59 @@
+name: Package Dependencies
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Get Composer Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install Composer deps
+        run: composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction --no-scripts
+
+      - name: Setup Node
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Install JS deps
+        run: pnpm install --frozen-lockfile --prod
+
+      - name: Build assets
+        run: pnpm run build
+
+      - name: Archive dependencies
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependencies-bundle
+          path: |
+            vendor
+            node_modules
+            public/build
+            composer.lock
+            pnpm-lock.yaml
+            package.json
