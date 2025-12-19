@@ -135,7 +135,7 @@ export default function Welcome({ auth }) {
                                 "Hace 15 años Dios me regaló la vida y una gran familia, hoy celebro con la ilusión de que esta noche sea inolvidable, llena de música, baile, risas y amor. Los espero para que sean parte de esta gran celebración."
                             </p>
                             <div onClick={toggleAudio} className="mt-8 flex justify-center space-x-4 text-[#D4AF37]">
-                                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                                <svg className="h-12 w-12" fill="#D4AF37" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                             </div>
                         </div>
 
@@ -212,7 +212,7 @@ export default function Welcome({ auth }) {
                             <img src="storage/assets/formal.svg" alt="Traje Formal" />
                         </picture>
 
-                        <h2 className="text-2xl sm:text-4xl flex flex-col items-center font-serif text-[#D4AF37] tracking-widest uppercase animate-fadeInUp">Luvia de sobres</h2>
+                        <h2 className="text-2xl sm:text-4xl flex flex-col items-center font-serif text-[#D4AF37] tracking-widest uppercase animate-fadeInUp">Lluvia de sobres</h2>
 
                     </div>
 
