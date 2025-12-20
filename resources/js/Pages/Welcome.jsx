@@ -76,7 +76,7 @@ export default function Welcome({ auth }) {
                     <audio ref={audioRef} src="/storage/assets/music.mp3" loop />
                 </div>
 
-                <main>
+                <main className="max-w-lg mx-auto pt-24 pb-12 px-4 sm:px-6 lg:px-8">
                     {/* Hero Section */}
                     <div className="relative pt-32 pb-3 sm:pt-40 sm:pb-4 lg:pb-12 overflow-hidden">
 
