@@ -21,13 +21,17 @@ export default function Dashboard({ familiesCount, guestsCount, families }) {
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
 
-                    <div className="mb-8 flex justify-end">
+                    <div className="mb-8 gap-3 flex justify-end">
                         <button
                             onClick={() => setShowGuestList(true)}
                             className="inline-flex items-center px-4 py-2 bg-[#D4AF37] border border-transparent rounded-md font-semibold text-xs text-[#0B1026] uppercase tracking-widest hover:bg-white focus:bg-white active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
                         >
                             Ver Lista Completa de Familias
                         </button>
+
+                        <a
+                        className="inline-flex items-center px-4 py-2 bg-[#D4AF37] border border-transparent rounded-md font-semibold text-xs text-[#0B1026] uppercase tracking-widest hover:bg-white focus:bg-white active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
+                        href={route('invitados.index')}>Invitados</a>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
