@@ -35,7 +35,7 @@ export default function Index({ invitados }) {
                                                 <td className="px-6 py-4 text-gray-300">{guest.edad}</td>
                                                 <td className="px-6 py-4 text-gray-300">
                                                     {guest.familia ? (
-                                                        <Link href={route('families.show', guest.familia.id)} className="hover:text-[#D4AF37] hover:underline">
+                                                        <Link href={route('familias.show', guest.familia.id)} className="hover:text-[#D4AF37] hover:underline">
                                                             {guest.familia.apellido}
                                                         </Link>
                                                     ) : 'N/A'}

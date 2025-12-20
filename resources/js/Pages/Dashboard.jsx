@@ -78,7 +78,7 @@ export default function Dashboard({ familiesCount, guestsCount, families }) {
                                         <td className="px-4 py-3 text-center text-gray-300">{family.invitados_count}</td>
                                         <td className="px-4 py-3 text-right">
                                             <Link
-                                                href={route('families.show', family.id)}
+                                                href={route('familias.show', family.id)}
                                                 className="text-blue-400 hover:text-blue-300 underline text-xs uppercase tracking-wider"
                                             >
                                                 Ver Detalles

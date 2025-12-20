@@ -44,7 +44,7 @@ export default function Show({ invitado }) {
                                 <div className="bg-gray-900/50 p-4 rounded-lg border border-gray-700">
                                     <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">Familia</p>
                                     {invitado.familia ? (
-                                        <Link href={route('families.show', invitado.familia.id)} className="text-lg text-[#D4AF37] hover:underline font-serif">
+                                        <Link href={route('familias.show', invitado.familia.id)} className="text-lg text-[#D4AF37] hover:underline font-serif">
                                             {invitado.familia.apellido}
                                         </Link>
                                     ) : (

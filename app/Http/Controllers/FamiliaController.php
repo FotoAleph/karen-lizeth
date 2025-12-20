@@ -38,9 +38,7 @@ class FamiliaController extends Controller
 
     public function show(\App\Models\Familia $familia)
     {
-        $invitados = Invitado::where('familia_id', $familia->id)->get();
-        dd($invitados);
-
+        $familia->load('invitados');
 
         return \Inertia\Inertia::render('Families/Show', [
             'familia' => $familia

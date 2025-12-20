@@ -26,7 +26,7 @@ export default function Show({ familia }) {
                         </Link>
                     </div>
 
-                    <div className="bg-white shadow-sm sm:rounded-lg dark:bg-gray-800 border-t-4 border-[#D4AF37]">
+                    <div className=" shadow-sm sm:rounded-lg bg-gray-800 light:bg-white border-t-4 border-[#D4AF37]">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
 
                             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-gray-700 pb-4">
@@ -54,11 +54,11 @@ export default function Show({ familia }) {
                                             <th scope="col" className="px-6 py-4">Edad</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-gray-700">
+                                    <tbody className="divide-y divide-gray-700 bg-slate-600">
                                         {familia.invitados.map((guest) => (
                                             <tr key={guest.id} className="hover:bg-gray-700/50 transition-colors">
-                                                <td className="px-6 py-4 text-white font-medium">{guest.nombre}</td>
-                                                <td className="px-6 py-4 text-gray-300">{guest.edad}</td>
+                                                <td className="px-6 py-4 text-[#D4AF37] font-medium">{guest.nombre}</td>
+                                                <td className="px-6 py-4 text-[#D4AF37]">{guest.edad}</td>
                                             </tr>
                                         ))}
                                         {familia.invitados.length === 0 && (

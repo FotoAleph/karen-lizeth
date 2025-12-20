@@ -40,7 +40,7 @@ export default function Index({ families }) {
                                                 </td>
                                                 <td className="px-6 py-4 text-right">
                                                     <Link
-                                                        href={route('families.show', family.id)}
+                                                        href={route('familias.show', family.id)}
                                                         className="text-blue-400 hover:text-blue-300 hover:underline uppercase text-xs tracking-wider"
                                                     >
                                                         Ver Detalles

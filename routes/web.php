@@ -26,9 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    
+
     // Resource Routes
-    Route::resource('families', App\Http\Controllers\FamiliaController::class)->only(['index', 'show']);
+    Route::resource('familias', App\Http\Controllers\FamiliaController::class)->only(['index', 'show']);
     Route::resource('invitados', App\Http\Controllers\InvitadoController::class)->only(['index', 'show']);
 });
 
