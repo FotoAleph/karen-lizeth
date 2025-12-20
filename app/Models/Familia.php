@@ -10,6 +10,6 @@ class Familia extends Model
 
     public function invitados()
     {
-        return $this->hasMany(Invitado::class);
+        return $this->hasMany(Invitado::class, 'familia_id');
     }
 }

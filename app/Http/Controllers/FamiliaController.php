@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Invitado;
 use Illuminate\Http\Request;
 
 class FamiliaController extends Controller
@@ -37,7 +38,9 @@ class FamiliaController extends Controller
 
     public function show(\App\Models\Familia $familia)
     {
-        $familia->load('invitados');
+        $invitados = Invitado::where('familia_id', $familia->id)->get();
+        dd($invitados);
+
 
         return \Inertia\Inertia::render('Families/Show', [
             'familia' => $familia

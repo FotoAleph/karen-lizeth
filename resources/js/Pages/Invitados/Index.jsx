@@ -15,10 +15,10 @@ export default function Index({ invitados }) {
 
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="bg-white shadow-sm sm:rounded-lg dark:bg-gray-800 border-t-4 border-blue-500">
+                    <div className=" shadow-sm sm:rounded-lg bg-gray-800 light:bg-white border-t-4 border-blue-500">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
 
-                            <div className="overflow-x-auto">
+                            <div className="overflow-x-auto bg-gray-500/10 rounded-lg">
                                 <table className="min-w-full text-left text-sm whitespace-nowrap">
                                     <thead className="uppercase tracking-wider border-b-2 border-gray-700 bg-gray-800 text-blue-400">
                                         <tr>
@@ -28,7 +28,7 @@ export default function Index({ invitados }) {
                                             <th scope="col" className="px-6 py-4 text-right">Acciones</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-gray-700">
+                                    <tbody className="divide-y divide-gray-700 bg-gray-800">
                                         {invitados.data.map((guest) => (
                                             <tr key={guest.id} className="hover:bg-gray-700/50 transition-colors">
                                                 <td className="px-6 py-4 font-medium text-white">{guest.nombre}</td>
